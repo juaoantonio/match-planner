@@ -11,7 +11,7 @@ export function TypographyH4({
   return (
     <h4
       className={cn(
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        "scroll-m-20 text-xl font-medium tracking-tight",
         className,
       )}
       {...rest}

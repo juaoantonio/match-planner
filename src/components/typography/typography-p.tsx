@@ -6,7 +6,7 @@ type TypographyProps = ComponentProps<"p">;
 export function TypographyP({ children, className, ...rest }: TypographyProps) {
   return (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn("[p:not(:first-child)]:mt-6 leading-7", className)}
       {...rest}
     >
       {children}
