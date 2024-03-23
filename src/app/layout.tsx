@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Navbar } from "./components";
 import "./globals.css";
+import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <body className={inter.className}>
+        <header className="flex items-center justify-between bg-background p-3">
+          <Link href="/" className="grid place-items-center">
+            <Image src="/full-logo.svg" alt="logo" width={150} height={50} />
+          </Link>
+
+          <Navbar />
+        </header>
+        <Separator />
+        {children}
+      </body>
     </html>
   );
 }
